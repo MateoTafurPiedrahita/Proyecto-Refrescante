@@ -31,7 +31,7 @@ function LoginPage() {
     const { error } = await supabase.auth.signInWithPassword({ email, password });
     setLoading(false);
     if (error) {
-      toast.error(error.message === "Invalid login credentials" ? "Email o contraseña incorrectos" : error.message);
+      toast.error("Email o contraseña incorrectos");
       return;
     }
     toast.success("¡Bienvenido de vuelta!");
