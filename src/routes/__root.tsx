@@ -80,10 +80,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Refrescante: limonadas artesanales, jugos tropicales y cócteles sin alcohol en Neiva. Bebidas naturales hechas con ingredientes frescos." },
       { name: "author", content: "Refrescante" },
       { property: "og:title", content: "Refrescante — Bebidas Naturales en Neiva" },
-      { property: "og:description", content: "Refrescante: limonadas artesanales, jugos tropicales y cócteles sin alcohol en Neiva." },
+      { property: "og:description", content: "Refrescante: limonadas artesanales, jugos tropicales y cócteles sin alcohol en Neiva. Bebidas naturales hechas con ingredientes frescos." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@refrescante" },
+      { name: "twitter:title", content: "Refrescante — Bebidas Naturales en Neiva" },
+      { name: "twitter:description", content: "Refrescante: limonadas artesanales, jugos tropicales y cócteles sin alcohol en Neiva. Bebidas naturales hechas con ingredientes frescos." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a7a085b4-db35-41aa-968b-b1088bf563e9/id-preview-70b5183a--9ebcf5df-f589-4e61-9803-5a37f5ab4296.lovable.app-1779604630248.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a7a085b4-db35-41aa-968b-b1088bf563e9/id-preview-70b5183a--9ebcf5df-f589-4e61-9803-5a37f5ab4296.lovable.app-1779604630248.png" },
     ],
     links: [
       {
