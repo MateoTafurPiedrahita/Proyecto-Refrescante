@@ -14,173 +14,16 @@ export type Database = {
   }
   public: {
     Tables: {
-      contact_messages: {
-        Row: {
-          asunto: string | null
-          created_at: string
-          email: string
-          id: string
-          mensaje: string
-          nombre: string
-        }
-        Insert: {
-          asunto?: string | null
-          created_at?: string
-          email: string
-          id?: string
-          mensaje: string
-          nombre: string
-        }
-        Update: {
-          asunto?: string | null
-          created_at?: string
-          email?: string
-          id?: string
-          mensaje?: string
-          nombre?: string
-        }
-        Relationships: []
-      }
-      pedido_items: {
-        Row: {
-          cantidad: number
-          created_at: string
-          id: string
-          pedido_id: string
-          precio_unitario: number
-          producto_nombre: string
-        }
-        Insert: {
-          cantidad: number
-          created_at?: string
-          id?: string
-          pedido_id: string
-          precio_unitario: number
-          producto_nombre: string
-        }
-        Update: {
-          cantidad?: number
-          created_at?: string
-          id?: string
-          pedido_id?: string
-          precio_unitario?: number
-          producto_nombre?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "pedido_items_pedido_id_fkey"
-            columns: ["pedido_id"]
-            isOneToOne: false
-            referencedRelation: "pedidos"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      pedidos: {
-        Row: {
-          created_at: string
-          direccion_entrega: string
-          estado: Database["public"]["Enums"]["pedido_estado"]
-          id: string
-          notas: string | null
-          telefono_contacto: string
-          total: number
-          updated_at: string
-          user_id: string
-        }
-        Insert: {
-          created_at?: string
-          direccion_entrega: string
-          estado?: Database["public"]["Enums"]["pedido_estado"]
-          id?: string
-          notas?: string | null
-          telefono_contacto: string
-          total?: number
-          updated_at?: string
-          user_id: string
-        }
-        Update: {
-          created_at?: string
-          direccion_entrega?: string
-          estado?: Database["public"]["Enums"]["pedido_estado"]
-          id?: string
-          notas?: string | null
-          telefono_contacto?: string
-          total?: number
-          updated_at?: string
-          user_id?: string
-        }
-        Relationships: []
-      }
-      profiles: {
-        Row: {
-          created_at: string
-          direccion: string | null
-          id: string
-          nombre_completo: string | null
-          telefono: string | null
-          updated_at: string
-        }
-        Insert: {
-          created_at?: string
-          direccion?: string | null
-          id: string
-          nombre_completo?: string | null
-          telefono?: string | null
-          updated_at?: string
-        }
-        Update: {
-          created_at?: string
-          direccion?: string | null
-          id?: string
-          nombre_completo?: string | null
-          telefono?: string | null
-          updated_at?: string
-        }
-        Relationships: []
-      }
-      user_roles: {
-        Row: {
-          created_at: string
-          id: string
-          role: Database["public"]["Enums"]["app_role"]
-          user_id: string
-        }
-        Insert: {
-          created_at?: string
-          id?: string
-          role: Database["public"]["Enums"]["app_role"]
-          user_id: string
-        }
-        Update: {
-          created_at?: string
-          id?: string
-          role?: Database["public"]["Enums"]["app_role"]
-          user_id?: string
-        }
-        Relationships: []
-      }
+      [_ in never]: never
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      has_role: {
-        Args: {
-          _role: Database["public"]["Enums"]["app_role"]
-          _user_id: string
-        }
-        Returns: boolean
-      }
+      [_ in never]: never
     }
     Enums: {
-      app_role: "admin" | "customer"
-      pedido_estado:
-        | "pendiente"
-        | "confirmado"
-        | "en_camino"
-        | "entregado"
-        | "cancelado"
+      [_ in never]: never
     }
     CompositeTypes: {
       [_ in never]: never
@@ -307,15 +150,6 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {
-      app_role: ["admin", "customer"],
-      pedido_estado: [
-        "pendiente",
-        "confirmado",
-        "en_camino",
-        "entregado",
-        "cancelado",
-      ],
-    },
+    Enums: {},
   },
 } as const
