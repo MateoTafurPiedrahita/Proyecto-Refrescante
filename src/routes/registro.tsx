@@ -43,7 +43,7 @@ function RegistroPage() {
     });
     setLoading(false);
     if (error) {
-      toast.error(error.message);
+      toast.error("No se pudo completar el registro. Verifica los datos e intenta de nuevo.");
       return;
     }
     toast.success("¡Cuenta creada! Revisa tu email para confirmar.");
