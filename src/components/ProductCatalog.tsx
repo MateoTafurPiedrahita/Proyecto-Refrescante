@@ -24,7 +24,7 @@ const products: Product[] = [
     name: "Limonada Clásica",
     description:
       "La receta de siempre. Limón fresco, agua con gas y la cantidad exacta de azúcar para un equilibrio perfecto entre dulce y ácido.",
-    price: "Desde $4.000",
+    price: "Desde $4.000 COP",
     image: lemonadeImg,
     tag: "🍋 Clásico",
   },
@@ -33,7 +33,7 @@ const products: Product[] = [
     name: "Limonada de Coco",
     description:
       "Una combinación tropical irresistible. Jugo de limón mezclado con leche de coco cremosa. Refrescante y diferente.",
-    price: "Desde $5.500",
+    price: "Desde $5.500 COP",
     image: coconutImg,
     tag: "🥥 Especial",
   },
@@ -42,7 +42,7 @@ const products: Product[] = [
     name: "Jugo de Maracuyá",
     description:
       "Fruta tropical del Huila en su máxima expresión. Dulce, ácido y lleno de vitaminas. Cosechado fresco cada día.",
-    price: "Desde $4.500",
+    price: "Desde $4.500 COP",
     image: passionImg,
     tag: "🌟 Popular",
   },
@@ -51,7 +51,7 @@ const products: Product[] = [
     name: "Jugo de Mango",
     description:
       "Mango maduro del Huila licuado al instante. Espeso, dulce y sin una gota de agua añadida. Sabor puro y natural.",
-    price: "Desde $4.500",
+    price: "Desde $4.500 COP",
     image: tropicalImg,
     tag: "🥭 Tropical",
   },
@@ -60,7 +60,7 @@ const products: Product[] = [
     name: "Cóctel de Frutas",
     description:
       "Nuestra mezcla estrella. Combinamos tres frutas de temporada con hielo y una pizca de jengibre. Único en la ciudad.",
-    price: "Desde $6.000",
+    price: "Desde $6.000 COP",
     image: mocktailImg,
     tag: "🍹 Signature",
   },
@@ -69,7 +69,7 @@ const products: Product[] = [
     name: "Agua Saborizada",
     description:
       "Agua infusionada con frutas y hierbas frescas. Pepino con menta, fresa con albahaca o naranja con romero. Sin azúcar.",
-    price: "Desde $3.500",
+    price: "Desde $3.500 COP",
     image: watermelonImg,
     tag: "💧 Saludable",
   },
@@ -115,7 +115,7 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
           {product.description}
         </p>
         <div className="mt-4 flex items-center justify-between gap-3">
-          <span className="text-lg font-extrabold text-primary" style={{ fontFamily: "var(--font-heading)" }}>
+          <span className="text-lg font-extrabold text-foreground" style={{ fontFamily: "var(--font-heading)" }}>
             {product.price}
           </span>
           <a
