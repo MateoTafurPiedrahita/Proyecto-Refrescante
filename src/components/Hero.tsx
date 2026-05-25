@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles } from "lucide-react";
+import lemonadeImg from "@/assets/lemonade.jpg";
 
 export function Hero() {
   return (
@@ -90,10 +91,13 @@ export function Hero() {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               className="relative"
             >
-              <div className="relative h-72 w-72 rounded-3xl bg-gradient-to-br from-lime/30 to-amber/30 p-2 sm:h-80 sm:w-80 lg:h-96 lg:w-96">
-                <div className="flex h-full w-full items-center justify-center rounded-2xl bg-gradient-to-br from-lime to-amber text-6xl font-bold text-white" style={{ fontFamily: "var(--font-heading)" }}>
-                  🍋
-                </div>
+              <div className="relative h-72 w-72 overflow-hidden rounded-3xl bg-gradient-to-br from-lime/30 to-amber/30 p-2 shadow-xl sm:h-80 sm:w-80 lg:h-96 lg:w-96">
+                <img
+                  src={lemonadeImg}
+                  alt="Bebida tropical de limón natural servida en vaso con hielo"
+                  loading="eager"
+                  className="h-full w-full rounded-2xl object-cover"
+                />
               </div>
               {/* Floating badges */}
               <div className="absolute -top-4 -left-4 rounded-2xl bg-white px-4 py-2 shadow-lg">
