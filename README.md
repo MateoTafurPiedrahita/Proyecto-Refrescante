@@ -1,61 +1,111 @@
-# Refrescante
+# 🍋 Refrescante
 
-Jugos naturales y bebidas refrescantes a domicilio en Neiva, Huila. Catálogo, pedidos en línea y panel administrativo.
+> Jugos naturales y bebidas artesanales a domicilio en Neiva, Huila.
 
-## Demo
-https://id-preview--9ebcf5df-f589-4e61-9803-5a37f5ab4296.lovable.app
+**Demo en vivo:** https://refrescante-neoba.lovable.app
 
-## Problema
-En Neiva, conseguir jugos naturales recién preparados a domicilio es difícil: las opciones existentes son industriales o no entregan a casa. Refrescante conecta a clientes con bebidas frescas hechas con fruta local y entrega rápida.
+---
 
-## Features
-- Catálogo de productos con imágenes y precios
-- Registro / login con email + Google
-- Mi cuenta: perfil, dirección de entrega e historial de pedidos
-- Pedidos con estados (pendiente → confirmado → en camino → entregado)
-- Panel admin: gestión de pedidos y mensajes de contacto
-- Formulario de contacto público
-- SEO básico: sitemap.xml, robots.txt, meta tags por ruta
+## El problema
+
+En Neiva no existe una forma fácil de pedir jugos naturales a domicilio. Las opciones son industriales, sin variedad, o simplemente no entregan a casa. **Refrescante** conecta a los clientes con bebidas frescas hechas con fruta local del Huila y entrega rápida.
+
+---
+
+## Para quién es
+
+- Familias en Neiva que quieren bebidas saludables sin salir de casa.
+- Personas que buscan opciones sin azúcar añadida ni conservantes.
+- Empresas y eventos que necesitan bebidas para grupos.
+
+---
+
+## Features principales
+
+| Feature | Estado |
+|---|---|
+| Catálogo con imágenes y precios | ✅ |
+| Pedido por WhatsApp | ✅ |
+| Registro / login (email + Google) | ✅ |
+| Mi cuenta: perfil, dirección, historial | ✅ |
+| Estados de pedido (pendiente → entregado) | ✅ |
+| Panel admin: gestión de pedidos y mensajes | ✅ |
+| Formulario de contacto público | ✅ |
+| SEO básico (sitemap, meta tags por ruta) | ✅ |
+
+---
 
 ## Stack
-- TanStack Start (React 19 + Vite 7) + TypeScript
-- Tailwind CSS v4 + shadcn/ui
-- Lovable Cloud (auth, base de datos PostgreSQL, RLS)
-- Deploy en Lovable
 
-## Cómo correr local
-1. Clonar el repo
-   ```bash
-   git clone <repo-url>
-   cd <repo>
-   ```
-2. Instalar dependencias
-   ```bash
-   bun install
-   ```
-3. Copiar variables de entorno (las provee Lovable Cloud automáticamente en el proyecto):
-   - `VITE_SUPABASE_URL`
-   - `VITE_SUPABASE_PUBLISHABLE_KEY`
-   - `VITE_SUPABASE_PROJECT_ID`
-4. Levantar dev server
-   ```bash
-   bun run dev
-   ```
+- **Frontend:** React 19 + Vite 7 + TypeScript + TanStack Router
+- **Estilos:** Tailwind CSS v4 + shadcn/ui + Framer Motion
+- **Backend / Auth / DB:** Lovable Cloud (PostgreSQL + RLS)
+- **Deploy:** Lovable
+
+---
 
 ## Modelo de datos
-- `profiles` — datos del cliente (nombre, teléfono, dirección)
-- `user_roles` — roles (`admin` / `customer`) en tabla aparte para evitar escalación de privilegios
-- `pedidos` — pedidos con estado, total, dirección y teléfono
-- `pedido_items` — productos de cada pedido
-- `contact_messages` — mensajes del formulario público
 
-Toda tabla tiene RLS activa. Los admins se validan con la función `has_role(auth.uid(), 'admin')` (SECURITY DEFINER, sin recursión).
+```
+profiles         → nombre, teléfono, dirección del cliente
+user_roles       → roles (admin / customer), separados para evitar escalación
+pedidos          → estado, total, dirección, teléfono
+pedido_items     → productos de cada pedido
+contact_messages → mensajes del formulario público
+```
 
-## Rutas principales
-- `/` — landing
-- `/productos` — catálogo
-- `/servicios` — servicios de catering / eventos
-- `/contacto` — formulario de contacto
-- `/login` · `/registro` — autenticación
-- `/mi-cuenta` — área del cliente (protegida)
-- `/admin` — panel administrativo (solo rol `admin`)
+Toda tabla tiene **Row Level Security (RLS)** activa. Los admins se validan con `has_role(auth.uid(), 'admin')` (SECURITY DEFINER, sin recursión).
+
+---
+
+## Rutas
+
+| Ruta | Descripción |
+|---|---|
+| `/` | Landing page |
+| `/productos` | Catálogo de bebidas |
+| `/servicios` | Catering y eventos |
+| `/contacto` | Formulario de contacto |
+| `/login` · `/registro` | Autenticación |
+| `/mi-cuenta` | Área del cliente (protegida) |
+| `/admin` | Panel administrativo (solo rol `admin`) |
+
+---
+
+## Cómo correr local
+
+```bash
+# 1. Clonar
+git clone <repo-url>
+cd <repo>
+
+# 2. Instalar dependencias
+bun install
+
+# 3. Variables de entorno (Lovable Cloud las provee automáticamente en el proyecto)
+# Crear .env con:
+# VITE_SUPABASE_URL=...
+# VITE_SUPABASE_PUBLISHABLE_KEY=...
+# VITE_SUPABASE_PROJECT_ID=...
+
+# 4. Levantar servidor de desarrollo
+bun run dev
+```
+
+---
+
+## Lo que aprendí
+
+- Lovable Cloud acelera mucho el setup de auth + DB, pero tiene sus propias abstracciones que aprender.
+- RLS con roles separados evita bugs de escalación de privilegios que son difíciles de debuggear.
+- Integrar WhatsApp como canal de pedidos fue la decisión más pragmática para el contexto local.
+
+---
+
+## Qué viene después
+
+- [ ] Sistema de pagos (PSE / Nequi)
+- [ ] Notificaciones por WhatsApp al cambiar estado del pedido
+- [ ] Geolocalización del repartidor en tiempo real
+- [ ] Programa de referidos
+
