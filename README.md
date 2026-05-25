@@ -94,14 +94,7 @@ bun run dev
 
 ---
 
-## Lo que aprendí
-
-- Lovable Cloud acelera mucho el setup de auth + DB, pero tiene sus propias abstracciones que aprender.
-- RLS con roles separados evita bugs de escalación de privilegios que son difíciles de debuggear.
-- Integrar WhatsApp como canal de pedidos fue la decisión más pragmática para el contexto local.
-
 ---
-
 ## Qué viene después
 
 - [ ] Sistema de pagos (PSE / Nequi)
