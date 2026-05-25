@@ -56,15 +56,15 @@ export function About() {
           {stats.map((s) => (
             <div
               key={s.lbl}
-              className="rounded-2xl border border-border/50 bg-card p-5 text-center shadow-sm transition-all hover:border-primary/30 hover:shadow-md"
+              className="rounded-2xl border-2 border-forest/10 bg-white p-5 text-center shadow-sm transition-all hover:border-forest/30 hover:shadow-md"
             >
               <div
-                className="text-4xl font-extrabold text-primary sm:text-5xl"
+                className="text-4xl font-extrabold text-forest sm:text-5xl"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 {s.num}
               </div>
-              <div className="mt-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              <div className="mt-2 text-xs font-bold uppercase tracking-wider text-foreground/70">
                 {s.lbl}
               </div>
             </div>
