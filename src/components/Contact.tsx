@@ -214,10 +214,10 @@ export function Contact() {
               </p>
 
               <div className="mt-6 space-y-4">
-                <InfoRow icon={<MapPin className="h-5 w-5 text-primary" />} label="Dirección" value="Av. Pastrana Borrero con Cra 1a, Neiva, Huila" />
-                <InfoRow icon={<Phone className="h-5 w-5 text-primary" />} label="Teléfono" value="+57 321 255 9191" href="https://wa.me/573212559191" />
-                <InfoRow icon={<Mail className="h-5 w-5 text-primary" />} label="Email" value="u20242228492@usco.edu.co" href="mailto:u20242228492@usco.edu.co" />
-                <InfoRow icon={<Clock className="h-5 w-5 text-primary" />} label="Horario" value="Lunes a Sábado: 8:00 am – 8:00 pm" />
+                <InfoRow icon={<MapPin className="h-5 w-5 text-white" strokeWidth={2.5} />} label="Dirección" value="Av. Pastrana Borrero con Cra 1a, Neiva, Huila" />
+                <InfoRow icon={<Phone className="h-5 w-5 text-white" strokeWidth={2.5} />} label="Teléfono" value="+57 321 255 9191" href="https://wa.me/573212559191" />
+                <InfoRow icon={<Mail className="h-5 w-5 text-white" strokeWidth={2.5} />} label="Email" value="u20242228492@usco.edu.co" href="mailto:u20242228492@usco.edu.co" />
+                <InfoRow icon={<Clock className="h-5 w-5 text-white" strokeWidth={2.5} />} label="Horario" value="Lunes a Sábado: 8:00 am – 8:00 pm" />
               </div>
             </div>
 
@@ -253,7 +253,7 @@ function InfoRow({
 }) {
   const content = (
     <>
-      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary/10">
+      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-forest shadow-md">
         {icon}
       </div>
       <div className="min-w-0">

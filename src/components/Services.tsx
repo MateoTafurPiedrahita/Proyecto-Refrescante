@@ -11,7 +11,7 @@ interface Service {
 
 const services: Service[] = [
   {
-    icon: <Citrus className="h-8 w-8 text-primary" />,
+    icon: <Citrus className="h-8 w-8 text-forest" strokeWidth={2.5} />,
     title: "Limonadas Artesanales",
     description:
       "Preparadas al momento con limón recién exprimido y el toque secreto de nuestra receta. ¡La más pedida!",
@@ -19,7 +19,7 @@ const services: Service[] = [
     features: ["Sin conservantes", "Endulzadas con miel o panela", "Variedad de sabores"],
   },
   {
-    icon: <Apple className="h-8 w-8 text-forest" />,
+    icon: <Apple className="h-8 w-8 text-forest" strokeWidth={2.5} />,
     title: "Jugos Tropicales",
     description:
       "Maracuyá, mango, guanábana y más frutas del Huila, procesadas sin conservantes ni colorantes artificiales.",
@@ -27,7 +27,7 @@ const services: Service[] = [
     features: ["100% fruta natural", "Sin azúcar añadida", "Vasos grandes"],
   },
   {
-    icon: <Wine className="h-8 w-8 text-amber" />,
+    icon: <Wine className="h-8 w-8 text-forest" strokeWidth={2.5} />,
     title: "Cócteles Sin Alcohol",
     description:
       "Mezclas creativas con frutas frescas, hierbas aromáticas y mucho sabor para compartir en cualquier ocasión.",
@@ -46,7 +46,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
       className="group relative rounded-2xl border border-border/50 bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10"
     >
       <div className="flex items-start justify-between">
-        <div className="inline-flex rounded-xl bg-lime/15 p-3">{service.icon}</div>
+        <div className="inline-flex rounded-xl bg-white p-3 shadow-md ring-2 ring-forest/20">{service.icon}</div>
         <span className="rounded-full bg-amber px-3 py-1 text-xs font-bold text-amber-foreground">
           {service.tag}
         </span>
