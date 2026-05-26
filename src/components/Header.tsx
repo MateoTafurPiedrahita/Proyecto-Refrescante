@@ -7,6 +7,17 @@ import { useTheme } from "@/hooks/useTheme";
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { session, isAdmin, signOut } = useAuth();
+  const { theme, toggleTheme } = useTheme();
+
+  const ThemeToggle = ({ onClick }: { onClick?: () => void }) => (
+    <button
+      onClick={() => { toggleTheme(); onClick?.(); }}
+      className="inline-flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+      aria-label={theme === "dark" ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
+    >
+      {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+    </button>
+  );
 
   const navLinks = [
     { to: "/" as const, label: "Inicio" },
