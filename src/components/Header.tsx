@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, X, Droplets, User, LogOut, Shield } from "lucide-react";
+import { Menu, X, Droplets, User, LogOut, Shield, Sun, Moon } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
+import { useTheme } from "@/hooks/useTheme";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
