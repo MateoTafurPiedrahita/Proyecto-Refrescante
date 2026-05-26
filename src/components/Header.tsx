@@ -1,11 +1,23 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, X, Droplets, User, LogOut, Shield } from "lucide-react";
+import { Menu, X, Droplets, User, LogOut, Shield, Sun, Moon } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
+import { useTheme } from "@/hooks/useTheme";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { session, isAdmin, signOut } = useAuth();
+  const { theme, toggleTheme } = useTheme();
+
+  const ThemeToggle = ({ onClick }: { onClick?: () => void }) => (
+    <button
+      onClick={() => { toggleTheme(); onClick?.(); }}
+      className="inline-flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+      aria-label={theme === "dark" ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
+    >
+      {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+    </button>
+  );
 
   const navLinks = [
     { to: "/" as const, label: "Inicio" },
@@ -41,6 +53,7 @@ export function Header() {
 
         {/* CTA Desktop */}
         <div className="hidden items-center gap-3 md:flex">
+          <ThemeToggle />
           {session ? (
             <>
               {isAdmin && (
@@ -62,14 +75,17 @@ export function Header() {
           )}
         </div>
 
-        {/* Mobile menu button */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="inline-flex items-center justify-center rounded-md p-2 text-foreground md:hidden"
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        {/* Mobile controls */}
+        <div className="flex items-center gap-1 md:hidden">
+          <ThemeToggle />
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="inline-flex items-center justify-center rounded-md p-2 text-foreground"
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile nav */}
