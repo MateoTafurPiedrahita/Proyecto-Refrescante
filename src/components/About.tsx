@@ -25,13 +25,13 @@ export function About() {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-3xl text-center"
         >
-          <span className="font-script text-2xl text-primary">Quiénes somos</span>
+          <span className="font-script text-2xl text-forest">Quiénes somos</span>
           <h2
             className="mt-2 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Pasión por cada{" "}
-            <span className="inline-flex items-center gap-2 text-primary">
+            <span className="inline-flex items-center gap-2 text-forest">
               bebida <Heart className="h-7 w-7 fill-primary text-primary" />
             </span>
           </h2>

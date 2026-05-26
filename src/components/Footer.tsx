@@ -67,7 +67,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-forest-foreground/10 pt-6 text-center text-xs text-forest-foreground/60">
+        <div className="mt-10 border-t border-forest-foreground/10 pt-6 text-center text-xs text-forest-foreground/80">
           &copy; <span className="text-lime">Refrescante</span> 2026 — Todos los derechos reservados. Hecho con amor en Neiva, Huila.
         </div>
       </div>

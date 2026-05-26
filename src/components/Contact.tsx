@@ -64,7 +64,7 @@ export function Contact() {
             <Send className="h-4 w-4" />
             Escríbenos
           </div>
-          <span className="font-script mt-3 block text-2xl text-primary">Hablemos</span>
+          <span className="font-script mt-3 block text-2xl text-forest">Hablemos</span>
           <h2
             className="mt-1 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl"
             style={{ fontFamily: "var(--font-heading)" }}

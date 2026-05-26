@@ -87,13 +87,13 @@ export function Services() {
             <PartyPopper className="h-4 w-4" />
             Lo que ofrecemos
           </div>
-          <span className="font-script mt-3 block text-2xl text-primary">Nuestros servicios</span>
+          <span className="font-script mt-3 block text-2xl text-forest">Nuestros servicios</span>
           <h2
             className="mt-1 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Servicios hechos con{" "}
-            <span className="text-primary">pasión</span>
+            <span className="text-forest">pasión</span>
           </h2>
           <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-primary" />
           <p className="mt-4 text-lg text-muted-foreground">
