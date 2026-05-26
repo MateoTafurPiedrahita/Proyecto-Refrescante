@@ -53,6 +53,7 @@ export function Header() {
 
         {/* CTA Desktop */}
         <div className="hidden items-center gap-3 md:flex">
+          <ThemeToggle />
           {session ? (
             <>
               {isAdmin && (
