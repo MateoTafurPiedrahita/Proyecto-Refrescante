@@ -83,7 +83,7 @@ export function Services() {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-2xl text-center"
         >
-          <div className="inline-flex items-center gap-2 rounded-full bg-amber/15 px-4 py-1.5 text-sm font-medium text-amber">
+          <div className="inline-flex items-center gap-2 rounded-full bg-lime/15 px-4 py-1.5 text-sm font-medium text-forest">
             <PartyPopper className="h-4 w-4" />
             Lo que ofrecemos
           </div>
