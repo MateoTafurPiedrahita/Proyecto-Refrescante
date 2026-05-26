@@ -93,7 +93,7 @@ export function Services() {
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Servicios hechos con{" "}
-            <span className="text-primary">pasión</span>
+            <span className="text-forest">pasión</span>
           </h2>
           <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-primary" />
           <p className="mt-4 text-lg text-muted-foreground">

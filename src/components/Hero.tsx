@@ -46,7 +46,7 @@ export function Hero() {
               style={{ fontFamily: "var(--font-heading)" }}
             >
               La Mejor Tienda de{" "}
-              <span className="text-primary">Bebidas</span> de{" "}
+              <span className="text-forest">Bebidas</span> de{" "}
               <span className="text-amber">Neiva</span>
             </motion.h1>
 

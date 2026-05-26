@@ -153,7 +153,7 @@ export function ProductCatalog() {
             className="mt-1 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            Nuestros <span className="text-primary">Productos</span>
+            Nuestros <span className="text-forest">Productos</span>
           </h2>
           <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-primary" />
           <p className="mt-4 text-lg text-muted-foreground">

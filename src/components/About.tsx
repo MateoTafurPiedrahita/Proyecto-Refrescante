@@ -31,7 +31,7 @@ export function About() {
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Pasión por cada{" "}
-            <span className="inline-flex items-center gap-2 text-primary">
+            <span className="inline-flex items-center gap-2 text-forest">
               bebida <Heart className="h-7 w-7 fill-primary text-primary" />
             </span>
           </h2>
