@@ -148,7 +148,7 @@ export function ProductCatalog() {
             <ShoppingBag className="h-4 w-4" />
             Nuestro catálogo
           </div>
-          <span className="font-script mt-3 block text-2xl text-primary">Lo que nos hace únicos</span>
+          <span className="font-script mt-3 block text-2xl text-forest">Lo que nos hace únicos</span>
           <h2
             className="mt-1 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl"
             style={{ fontFamily: "var(--font-heading)" }}

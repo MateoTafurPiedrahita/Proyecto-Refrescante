@@ -105,7 +105,7 @@ function RegistroPage() {
 
         <p className="text-center text-sm text-muted-foreground">
           ¿Ya tienes cuenta?{" "}
-          <Link to="/login" className="font-semibold text-primary hover:underline">Inicia sesión</Link>
+          <Link to="/login" className="font-semibold text-forest hover:underline">Inicia sesión</Link>
         </p>
       </div>
     </main>

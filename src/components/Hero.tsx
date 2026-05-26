@@ -33,7 +33,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.05 }}
-              className="font-script mt-5 block text-3xl text-primary"
+              className="font-script mt-5 block text-3xl text-forest"
             >
               Bienvenidos a
             </motion.span>
